@@ -76,8 +76,8 @@ sensible defaults.
     lookup-only: ""
 
     # Specifies what to use as the backend providing cache
-    # Can be set to either "github" or "buildjet"
-    # default: "github"
+    # Can be set to either "github" or "blacksmith"
+    # default: "blacksmith"
     cache-provider: ""
 
     # Determines whether to cache the ~/.cargo/bin directory.
