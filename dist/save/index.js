@@ -104319,7 +104319,13 @@ async function getCmdOutput(cmd, args = [], options = {}) {
 }
 function getCacheProvider() {
     const cacheProvider = core.getInput("cache-provider");
-    const cache = cacheProvider === "github" ? cache_lib_cache : cacheProvider === "buildjet" ? lib_cache : cacheProvider === "blacksmith" ? blacksmith_cache_lib_cache : undefined;
+    const cache = cacheProvider === "github"
+        ? cache_lib_cache
+        : cacheProvider === "buildjet"
+            ? lib_cache
+            : cacheProvider === "blacksmith"
+                ? blacksmith_cache_lib_cache
+                : undefined;
     if (!cache) {
         throw new Error(`The \`cache-provider\` \`{cacheProvider}\` is not valid.`);
     }
