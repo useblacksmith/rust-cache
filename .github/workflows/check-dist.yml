@@ -13,12 +13,12 @@ on:
 
 jobs:
   check-dist:
-    runs-on: ubuntu-latest
+    runs-on: blacksmith-4vcpu-ubuntu-2204
     steps:
       - uses: actions/checkout@v3
 
       - name: Setup Node.js 20.x
-        uses: actions/setup-node@v3
+        uses: useblacksmith/setup-node@v5
         with:
           node-version: 20.x
           cache: npm
